@@ -120,6 +120,7 @@ export default class LookupModal extends React.Component {
                     <View style={{...styles.modalContent, ...this.props.contentStyle}}>
                         <View style={styles.header}>
                             <TextInput
+onSubmitEditing={() => this.state.searchResults.length === 0 ?  this.onSelect({ name: this.state.search }) : null}
                                 style={styles.textInput}
                                 placeholder={this.props.placeholder}
                                 onChangeText={(text) => {
